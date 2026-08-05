@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Portal One mock video generator</title>
+<canvas id="scene" width="960" height="540"></canvas>
+<pre id="output">recording</pre>
+<script>
+const canvas = document.querySelector('#scene')
+const ctx = canvas.getContext('2d')
+const output = document.querySelector('#output')
+const colors = { bg: '#071d2d', grid: '#16384a', teal: '#36c2b4', gold: '#ffcb66', pale: '#e8f2f0' }
+
+function box(x, y, size, color) {
+  ctx.fillStyle = color
+  ctx.fillRect(x, y, size * 1.45, size)
+  ctx.strokeStyle = colors.bg
+  ctx.lineWidth = 3
+  ctx.strokeRect(x, y, size * 1.45, size)
+}
+
+function draw(t) {
+  ctx.fillStyle = colors.bg
+  ctx.fillRect(0, 0, 960, 540)
+  ctx.strokeStyle = colors.grid
+  ctx.lineWidth = 1
+  for (let x = 0; x <= 960; x += 80) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, 540); ctx.stroke() }
+  for (let y = 0; y <= 540; y += 68) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(960, y); ctx.stroke() }
+
+  const travel = (t * 130) % 1150 - 190
+  ctx.fillStyle = colors.pale
+  ctx.beginPath(); ctx.moveTo(travel, 350); ctx.lineTo(travel + 330, 350); ctx.lineTo(travel + 280, 425); ctx.lineTo(travel + 55, 425); ctx.closePath(); ctx.fill()
+  box(travel + 55, 292, 56, colors.teal); box(travel + 140, 292, 56, colors.gold); box(travel + 225, 292, 56, colors.teal)
+
+  const truck = 980 - ((t * 170) % 1180)
+  ctx.fillStyle = colors.gold; ctx.fillRect(truck, 220, 190, 86)
+  ctx.fillStyle = colors.pale; ctx.fillRect(truck + 190, 242, 80, 64)
+  ctx.fillStyle = colors.teal
+  ctx.beginPath(); ctx.arc(truck + 55, 318, 24, 0, Math.PI * 2); ctx.fill()
+  ctx.beginPath(); ctx.arc(truck + 220, 318, 24, 0, Math.PI * 2); ctx.fill()
+
+  ctx.strokeStyle = colors.teal
+  ctx.lineWidth = 10
+  ctx.setLineDash([18, 16])
+  ctx.beginPath(); ctx.moveTo(80, 465); ctx.bezierCurveTo(300, 395, 600, 520, 880, 440); ctx.stroke()
+  ctx.setLineDash([])
+
+  const pulse = 13 + Math.sin(t * 4) * 5
+  for (const [x, y] of [[100, 458], [350, 440], [620, 470], [865, 444]]) {
+    ctx.fillStyle = colors.gold; ctx.beginPath(); ctx.arc(x, y, pulse, 0, Math.PI * 2); ctx.fill()
+  }
+}
+
+const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
+  ? 'video/webm;codecs=vp9'
+  : 'video/webm;codecs=vp8'
+const chunks = []
+const recorder = new MediaRecorder(canvas.captureStream(24), { mimeType, videoBitsPerSecond: 900000 })
+recorder.ondataavailable = (event) => { if (event.data.size) chunks.push(event.data) }
+recorder.onstop = () => {
+  const blob = new Blob(chunks, { type: 'video/webm' })
+  const link = document.createElement('a')
+  link.href = URL.createObjectURL(blob)
+  link.download = 'supply-chain-overview.webm'
+  document.body.appendChild(link)
+  link.click()
+  const reader = new FileReader()
+  reader.onload = () => { output.textContent = reader.result }
+  reader.readAsDataURL(blob)
+}
+const started = performance.now()
+recorder.start()
+function tick(now) {
+  const seconds = (now - started) / 1000
+  draw(seconds)
+  if (seconds < 5) requestAnimationFrame(tick)
+  else recorder.stop()
+}
+requestAnimationFrame(tick)
+</script>
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title">
+  <title id="title">Supply chain overview video poster</title>
+  <rect width="1600" height="1000" fill="#071d2d"/>
+  <path d="M0 170H1600M0 340H1600M0 510H1600M0 680H1600M0 850H1600" stroke="#16384a" stroke-width="2"/>
+  <path d="M180 0V1000M420 0V1000M660 0V1000M900 0V1000M1140 0V1000M1380 0V1000" stroke="#102f40" stroke-width="2"/>
+  <path d="M0 820C290 750 520 880 820 815C1110 752 1320 785 1600 710V1000H0Z" fill="#0b2a3d"/>
+  <path d="M80 110H430" stroke="#ffcb66" stroke-width="12"/>
+  
+  <circle cx="800" cy="505" r="285" fill="#17495a" stroke="#36c2b4" stroke-width="20"/>
+  <path d="M800 305C670 420 670 590 800 705M800 305C930 420 930 590 800 705M535 505H1065M585 390H1015M585 620H1015" fill="none" stroke="#9bbcc2" stroke-width="16"/>
+  <circle cx="800" cy="505" r="105" fill="#ffcb66"/>
+  <path d="M770 440L875 505L770 570Z" fill="#071d2d"/>
+  <path d="M245 640H490L445 710H295Z" fill="#e8f2f0"/><path d="M1110 655H1355V750H1110Z" fill="#e8f2f0"/><circle cx="1165" cy="765" r="34" fill="#36c2b4"/><circle cx="1310" cy="765" r="34" fill="#36c2b4"/>
+
+</svg>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# 上线前替换为正式域名（mock）
+Sitemap: https://www.example.com/sitemap.xml

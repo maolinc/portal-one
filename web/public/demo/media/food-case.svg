@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title">
+  <title id="title">Food distribution case illustration</title>
+  <rect width="1600" height="1000" fill="#071d2d"/>
+  <path d="M0 170H1600M0 340H1600M0 510H1600M0 680H1600M0 850H1600" stroke="#16384a" stroke-width="2"/>
+  <path d="M180 0V1000M420 0V1000M660 0V1000M900 0V1000M1140 0V1000M1380 0V1000" stroke="#102f40" stroke-width="2"/>
+  <path d="M0 820C290 750 520 880 820 815C1110 752 1320 785 1600 710V1000H0Z" fill="#0b2a3d"/>
+  <path d="M80 110H430" stroke="#36c2b4" stroke-width="12"/>
+  
+  <g transform="translate(260 250)"><rect width="390" height="570" rx="28" fill="#e8f2f0"/><path d="M80 0C85-110 305-110 310 0" fill="none" stroke="#ffcb66" stroke-width="34"/><circle cx="195" cy="245" r="105" fill="#36c2b4"/><path d="M135 245C180 175 235 175 270 245C235 320 180 320 135 245Z" fill="#ffcb66"/></g>
+  <g transform="translate(805 335)"><path d="M0 115L190 0L380 115L190 230Z" fill="#ffcb66"/><path d="M0 115V365L190 480V230Z" fill="#b98230"/><path d="M380 115V365L190 480V230Z" fill="#dca848"/></g>
+  <path d="M1185 590H1390V775H1185Z" fill="#e8f2f0"/><circle cx="1235" cy="800" r="42" fill="#36c2b4"/><circle cx="1350" cy="800" r="42" fill="#36c2b4"/>
+  <path d="M650 735H805" stroke="#36c2b4" stroke-width="22" stroke-dasharray="26 22"/>
+
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title">
+  <title id="title">Smart warehouse demo illustration</title>
+  <rect width="1600" height="1000" fill="#071d2d"/>
+  <path d="M0 170H1600M0 340H1600M0 510H1600M0 680H1600M0 850H1600" stroke="#16384a" stroke-width="2"/>
+  <path d="M180 0V1000M420 0V1000M660 0V1000M900 0V1000M1140 0V1000M1380 0V1000" stroke="#102f40" stroke-width="2"/>
+  <path d="M0 820C290 750 520 880 820 815C1110 752 1320 785 1600 710V1000H0Z" fill="#0b2a3d"/>
+  <path d="M80 110H430" stroke="#36c2b4" stroke-width="12"/>
+  
+  <path d="M210 235H1390V830H210Z" fill="#e8f2f0"/>
+  <path d="M230 260L620 420V830H230ZM1370 260L980 420V830H1370Z" fill="#16384a"/>
+  <g fill="#ffcb66"><rect x="280" y="355" width="250" height="100"/><rect x="280" y="485" width="250" height="100"/><rect x="280" y="615" width="250" height="100"/><rect x="1070" y="355" width="250" height="100"/><rect x="1070" y="485" width="250" height="100"/><rect x="1070" y="615" width="250" height="100"/></g>
+  <path d="M800 830V415M640 830L760 415M960 830L840 415" stroke="#9bbcc2" stroke-width="12"/>
+  <g transform="translate(650 650)"><rect width="260" height="120" rx="12" fill="#36c2b4"/><rect x="165" y="-85" width="90" height="90" fill="#36c2b4"/><circle cx="65" cy="130" r="38" fill="#071d2d"/><circle cx="205" cy="130" r="38" fill="#071d2d"/><path d="M260 20H330V150M330 125H410" fill="none" stroke="#ffcb66" stroke-width="22"/></g>
+
+</svg>

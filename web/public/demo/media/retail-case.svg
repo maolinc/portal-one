@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title">
+  <title id="title">Retail distribution case illustration</title>
+  <rect width="1600" height="1000" fill="#071d2d"/>
+  <path d="M0 170H1600M0 340H1600M0 510H1600M0 680H1600M0 850H1600" stroke="#16384a" stroke-width="2"/>
+  <path d="M180 0V1000M420 0V1000M660 0V1000M900 0V1000M1140 0V1000M1380 0V1000" stroke="#102f40" stroke-width="2"/>
+  <path d="M0 820C290 750 520 880 820 815C1110 752 1320 785 1600 710V1000H0Z" fill="#0b2a3d"/>
+  <path d="M80 110H430" stroke="#ffcb66" stroke-width="12"/>
+  
+  <rect x="210" y="250" width="650" height="570" fill="#e8f2f0"/>
+  <path d="M280 380H790M280 555H790M280 730H790" stroke="#2a7180" stroke-width="30"/>
+  <g fill="#36c2b4"><rect x="320" y="300" width="90" height="65"/><rect x="455" y="290" width="75" height="75"/><rect x="590" y="305" width="120" height="60"/><rect x="320" y="470" width="120" height="70"/><rect x="490" y="460" width="85" height="80"/><rect x="635" y="480" width="90" height="60"/></g>
+  <g fill="#ffcb66"><rect x="320" y="645" width="75" height="70"/><rect x="455" y="630" width="110" height="85"/><rect x="625" y="650" width="100" height="65"/></g>
+  <path d="M980 705C1060 600 1120 520 1220 400C1290 320 1360 270 1425 230" fill="none" stroke="#36c2b4" stroke-width="22" stroke-linecap="round"/>
+  <g fill="#ffcb66"><circle cx="980" cy="705" r="38"/><circle cx="1125" cy="515" r="38"/><circle cx="1255" cy="360" r="38"/><circle cx="1425" cy="230" r="38"/></g>
+
+</svg>

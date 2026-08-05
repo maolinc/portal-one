@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title">
+  <title id="title">Electronics supply chain case illustration</title>
+  <rect width="1600" height="1000" fill="#071d2d"/>
+  <path d="M0 170H1600M0 340H1600M0 510H1600M0 680H1600M0 850H1600" stroke="#16384a" stroke-width="2"/>
+  <path d="M180 0V1000M420 0V1000M660 0V1000M900 0V1000M1140 0V1000M1380 0V1000" stroke="#102f40" stroke-width="2"/>
+  <path d="M0 820C290 750 520 880 820 815C1110 752 1320 785 1600 710V1000H0Z" fill="#0b2a3d"/>
+  <path d="M80 110H430" stroke="#36c2b4" stroke-width="12"/>
+  
+  <rect x="230" y="210" width="790" height="620" rx="34" fill="#17495a"/>
+  <g fill="none" stroke="#36c2b4" stroke-width="18"><path d="M330 340H530V520H760V710H910"/><path d="M330 690H480V585H645V360H900"/></g>
+  <g fill="#ffcb66"><circle cx="330" cy="340" r="32"/><circle cx="530" cy="520" r="32"/><circle cx="760" cy="710" r="32"/><circle cx="900" cy="360" r="32"/></g>
+  <rect x="520" y="380" width="250" height="250" rx="26" fill="#e8f2f0"/><path d="M565 470H725M565 525H690" stroke="#2a7180" stroke-width="20"/>
+  <g transform="translate(1110 420)"><path d="M0 95L155 0L310 95L155 190Z" fill="#ffcb66"/><path d="M0 95V290L155 390V190Z" fill="#b98230"/><path d="M310 95V290L155 390V190Z" fill="#dca848"/></g>
+
+</svg>

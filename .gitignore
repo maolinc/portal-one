@@ -1,0 +1,36 @@
+# Dependencies and build output
+**/node_modules/
+**/dist/
+coverage/
+logs/
+*.log
+
+# Local environment files
+**/.env
+**/.env.*
+!**/.env.example
+!web/.env.production
+**/*.local
+
+# Runtime data: database, sessions, leads, secrets, and uploads
+server/data/
+portal-one-data/
+
+# Local verification and agent tooling
+.verify/
+**/.verify/
+.agents/
+.claude/
+skills-lock.json
+AGENTES.md
+
+# Company-provided source material is not part of the open-source demo
+pic/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+NUL

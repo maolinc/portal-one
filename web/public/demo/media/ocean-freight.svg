@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title">
+  <title id="title">Ocean freight demo illustration</title>
+  <rect width="1600" height="1000" fill="#071d2d"/>
+  <path d="M0 170H1600M0 340H1600M0 510H1600M0 680H1600M0 850H1600" stroke="#16384a" stroke-width="2"/>
+  <path d="M180 0V1000M420 0V1000M660 0V1000M900 0V1000M1140 0V1000M1380 0V1000" stroke="#102f40" stroke-width="2"/>
+  <path d="M0 820C290 750 520 880 820 815C1110 752 1320 785 1600 710V1000H0Z" fill="#0b2a3d"/>
+  <path d="M80 110H430" stroke="#36c2b4" stroke-width="12"/>
+  
+  <path d="M260 690H1160L1040 820H390Z" fill="#e8f2f0"/>
+  <path d="M330 650H1080V700H330Z" fill="#ffcb66"/>
+  <g fill="#2a7180"><rect x="390" y="530" width="150" height="110"/><rect x="550" y="530" width="150" height="110"/><rect x="710" y="530" width="150" height="110"/></g>
+  <g fill="#36c2b4"><rect x="470" y="410" width="150" height="110"/><rect x="630" y="410" width="150" height="110"/><rect x="790" y="410" width="150" height="110"/></g>
+  <path d="M1040 400V650M1040 400H1280M1280 400V720M1120 400V560" fill="none" stroke="#9bbcc2" stroke-width="24"/>
+  <path d="M1110 565H1170L1140 625Z" fill="#ffcb66"/>
+  <path d="M90 850C330 805 520 910 760 855C1010 798 1260 850 1510 780" fill="none" stroke="#36c2b4" stroke-width="18"/>
+  <path d="M250 300C390 205 520 260 610 325M980 245C1100 175 1235 210 1325 285" fill="none" stroke="#e8f2f0" stroke-width="18" stroke-linecap="round" opacity=".8"/>
+
+</svg>

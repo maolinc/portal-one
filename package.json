@@ -1,0 +1,52 @@
+{
+  "name": "portal-one",
+  "version": "0.1.0",
+  "description": "可运营的中英双语企业门户、管理端与 SQLite 服务",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "portal-one": "scripts/portal-one.js"
+  },
+  "files": [
+    "admin/dist",
+    "server/src",
+    "web/dist",
+    "web/src/locales",
+    "web/src/mock",
+    "scripts/build.js",
+    "scripts/portal-one.js",
+    "justfile",
+    "README.md",
+    "SECURITY.md",
+    "LICENSE"
+  ],
+  "workspaces": [
+    "web",
+    "admin",
+    "server"
+  ],
+  "scripts": {
+    "start": "node scripts/portal-one.js start",
+    "build": "node scripts/build.js",
+    "seed": "node scripts/portal-one.js seed",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "better-sqlite3": "12.2.0",
+    "cos-nodejs-sdk-v5": "^3.0.0",
+    "express": "^4.21.2",
+    "express-rate-limit": "8.6.1",
+    "multer": "^2.0.1"
+  },
+  "keywords": [
+    "portal",
+    "cms",
+    "react",
+    "express",
+    "sqlite",
+    "bilingual"
+  ]
+}

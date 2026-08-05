@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Barlow Semi Condensed", "PingFang SC", "Microsoft YaHei", sans-serif;
+
+  /* 品牌深海蓝 */
+  --color-brand-50: #F0F6FC;
+  --color-brand-100: #DCEAF7;
+  --color-brand-200: #B9D4EE;
+  --color-brand-300: #8DB7E1;
+  --color-brand-400: #5C95D1;
+  --color-brand-500: #3978BC;
+  --color-brand-600: #2461A3;
+  --color-brand-700: #1D4E85;
+  --color-brand-800: #1A416C;
+  --color-brand-900: #142E4B;
+  --color-brand-950: #0A1D33;
+
+  /* 信号橙（全站唯一 accent） */
+  --color-accent-50: #FEF5F0;
+  --color-accent-100: #FDE7DA;
+  --color-accent-200: #FAC9AE;
+  --color-accent-300: #F6A275;
+  --color-accent-400: #F07A3C;
+  --color-accent-500: #E8590C;
+  --color-accent-600: #D04A06;
+  --color-accent-700: #AC3D08;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white font-sans text-slate-700 antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    @apply text-brand-950;
+    font-weight: 600;
+    /* i18n: 中英标题长度差异大时，balance 让浏览器自动平衡换行 */
+    text-wrap: balance;
+  }
+  ::selection {
+    background: var(--color-accent-600);
+    color: #fff;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent-600);
+    outline-offset: 2px;
+  }
+  img {
+    @apply select-none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  /* 微信老版 WebView 不支持 dvh，vh 兜底（支持时后者生效）。
+     Hero 占视口 40%，让首屏同时看到图片与下方业务入口；min/max 限制极值。 */
+  .hero-h {
+    height: 48vh;
+    height: 48dvh;
+    max-height: 620px;
+    min-height: 420px;
+  }
+  .min-h-dvh-fallback {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  /* 统一 8px 圆角体系（PRD 决策-10） */
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .section {
+    @apply py-16 md:py-24;
+  }
+  .btn,
+  .btn-primary,
+  .btn-outline,
+  .btn-outline-light {
+    @apply inline-flex h-11 cursor-pointer items-center justify-center gap-2 rounded-lg px-6 text-[15px] font-medium transition duration-200 active:translate-y-px;
+  }
+  .btn-primary {
+    @apply bg-accent-600 text-white hover:bg-accent-700;
+  }
+  .btn-outline {
+    @apply border border-brand-200 bg-white text-brand-700 hover:border-brand-400 hover:bg-brand-50;
+  }
+  .btn-outline-light {
+    @apply border border-white/60 text-white hover:bg-white/10;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-slate-800;
+  }
+  .input,
+  .textarea {
+    @apply h-11 w-full rounded-lg border border-slate-300 bg-white px-3.5 text-[15px] text-slate-800 transition placeholder:text-slate-500 focus:border-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-600/20;
+  }
+  .textarea {
+    @apply min-h-32 resize-y py-2.5;
+  }
+  .error-text {
+    @apply mt-1.5 flex items-center gap-1 text-sm text-accent-700;
+  }
+  .card {
+    @apply rounded-lg border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-16px_rgb(10_29_51/0.22)];
+  }
+  .eyebrow {
+    @apply font-display text-xs font-semibold tracking-[0.22em] text-accent-700 uppercase;
+  }
+}
